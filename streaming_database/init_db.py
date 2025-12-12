@@ -128,13 +128,24 @@ cursor.execute("INSERT OR REPLACE INTO app_info (key, value) VALUES (?, ?)", ("d
 
 # Seed users (bcrypt hashes produced externally; stored here as string)
 # Example hashes for 'password123' (do not rely on these for production)
+# Determine correct password column name based on existing schema (avoid destructive changes)
+password_col = "password_hash"
+try:
+    cursor.execute("PRAGMA table_info(users)")
+    cols = [row[1] for row in cursor.fetchall()]
+    if "password_hash" not in cols and "password" in cols:
+        password_col = "password"
+except Exception:
+    # Fallback silently to default 'password_hash'
+    pass
+
 users_seed = [
     ("alice", "alice@example.com", "$2b$12$C1i4b5lH2qH5I2nCq0fS7u4xw3CwNq6m5x1g8mOa0J3iJ6s5M3m9G"),
     ("bob", "bob@example.com", "$2b$12$C1i4b5lH2qH5I2nCq0fS7u4xw3CwNq6m5x1g8mOa0J3iJ6s5M3m9G"),
 ]
 for username, email, ph in users_seed:
     cursor.execute(
-        "INSERT OR IGNORE INTO users (username, email, password_hash) VALUES (?, ?, ?)",
+        f"INSERT OR IGNORE INTO users (username, email, {password_col}) VALUES (?, ?, ?)",
         (username, email, ph),
     )
 
