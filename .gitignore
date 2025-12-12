@@ -61,6 +61,13 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
+# StreamFlix SQLite artifacts (generated locally by streaming_database/init_db.py)
+streaming_database/data/*.db
+streaming_database/data/*.sqlite3
+streaming_database/data/*.sqlite
+streaming_database/data/*.sqlite-journal
+streaming_database/data/*.sqlite3-journal
+
 # Flask stuff:
 instance/
 .webassets-cache

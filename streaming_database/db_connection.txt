@@ -1,0 +1,24 @@
+StreamFlix SQLite connection info (deterministic)
+
+DB file (default):
+  streaming_database/data/streamflix.sqlite3
+
+Create/initialize schema + seed data (idempotent):
+  cd streamflix-platform-186045-186054/streaming_database
+  python3 init_db.py
+
+Override DB path (optional):
+  STREAMFLIX_SQLITE_PATH=/absolute/path/to/streamflix.sqlite3 python3 init_db.py
+
+Open SQLite CLI:
+  sqlite3 streaming_database/data/streamflix.sqlite3
+
+Useful verification commands (run inside sqlite3):
+  .tables
+  PRAGMA foreign_keys;
+  SELECT id, email, username FROM users;
+  SELECT id, slug, title, genre, release_year FROM videos ORDER BY id;
+  SELECT * FROM watch_history ORDER BY updated_at DESC LIMIT 10;
+
+One-shot SQL from shell (no interactive sqlite session):
+  sqlite3 streaming_database/data/streamflix.sqlite3 "SELECT COUNT(*) AS video_count FROM videos;"

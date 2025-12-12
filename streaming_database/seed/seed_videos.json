@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "slug": "the-coastal-heist",
+    "title": "The Coastal Heist",
+    "description": "A tight crew plans an impossible daylight heist along the coast—until the getaway route disappears.",
+    "genre": "Action",
+    "release_year": 2022,
+    "duration_seconds": 6120,
+    "rating": 7.4,
+    "tags": ["heist", "thriller", "ensemble"],
+    "thumbnail_url": "",
+    "video_path": "videos/the-coastal-heist.mp4"
+  },
+  {
+    "id": 2,
+    "slug": "midnight-algorithm",
+    "title": "Midnight Algorithm",
+    "description": "A burnt-out engineer discovers an AI that predicts crimes—then sees their own name at the top of the list.",
+    "genre": "Sci-Fi",
+    "release_year": 2023,
+    "duration_seconds": 6840,
+    "rating": 7.8,
+    "tags": ["ai", "mystery", "noir"],
+    "thumbnail_url": "",
+    "video_path": "videos/midnight-algorithm.mp4"
+  },
+  {
+    "id": 3,
+    "slug": "maple-street-stories",
+    "title": "Maple Street Stories",
+    "description": "A warm anthology of neighbors whose small choices ripple through an entire block.",
+    "genre": "Drama",
+    "release_year": 2021,
+    "duration_seconds": 5400,
+    "rating": 7.1,
+    "tags": ["anthology", "slice-of-life"],
+    "thumbnail_url": "",
+    "video_path": "videos/maple-street-stories.mp4"
+  },
+  {
+    "id": 4,
+    "slug": "orbit-of-echoes",
+    "title": "Orbit of Echoes",
+    "description": "A deep-space salvage mission uncovers a broadcast repeating humanity’s final message—sent from the future.",
+    "genre": "Sci-Fi",
+    "release_year": 2020,
+    "duration_seconds": 7260,
+    "rating": 7.6,
+    "tags": ["space", "survival", "time"],
+    "thumbnail_url": "",
+    "video_path": "videos/orbit-of-echoes.mp4"
+  },
+  {
+    "id": 5,
+    "slug": "chef-on-the-run",
+    "title": "Chef on the Run",
+    "description": "A celebrated chef loses everything and rebuilds with a food truck, one chaotic city at a time.",
+    "genre": "Comedy",
+    "release_year": 2019,
+    "duration_seconds": 5880,
+    "rating": 6.9,
+    "tags": ["food", "road-trip", "feel-good"],
+    "thumbnail_url": "",
+    "video_path": "videos/chef-on-the-run.mp4"
+  },
+  {
+    "id": 6,
+    "slug": "the-last-lighthouse",
+    "title": "The Last Lighthouse",
+    "description": "A keeper guards a lighthouse no ship visits—until the fog carries voices that shouldn’t exist.",
+    "genre": "Horror",
+    "release_year": 2024,
+    "duration_seconds": 6000,
+    "rating": 7.3,
+    "tags": ["atmospheric", "supernatural"],
+    "thumbnail_url": "",
+    "video_path": "videos/the-last-lighthouse.mp4"
+  }
+]
